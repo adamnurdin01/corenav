@@ -1,0 +1,29 @@
+{
+  "name": "corenav",
+  "version": "1.0.0",
+  "description": "Is a multi purpose navigation menu for javascript library based on jquery, come with more style and easy to combination.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamnurdin01/corenav.git"
+  },
+  "keywords": [
+    "Menu",
+    "Header",
+    "Multi",
+    "Menu",
+    "Navigation",
+    "Multi",
+    "Header",
+    "Menu"
+  ],
+  "author": "adamnurdin01",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adamnurdin01/corenav/issues"
+  },
+  "homepage": "https://github.com/adamnurdin01/corenav#readme"
+}

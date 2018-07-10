@@ -1,0 +1,97 @@
+/*
+Font Family
+=========================== */
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,600");
+
+/* Typography 
+=========================== */
+html, body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden !important;
+}
+body {
+    color: #6a6a6a;
+    background: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+a {
+    outline: 0;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    -khtml-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+a:focus {
+    outline: 0;
+}
+a:hover {
+    text-decoration: underline;
+}
+a.link {
+    color: #6a6a6a;
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #3a3a3a;
+    margin: 0 0 15px 0;
+    font-size: 48px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    line-height: 52px;
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 36px;
+    line-height: 48px;
+}
+h3 {
+    font-size: 30px;
+    line-height: 36px;
+}
+h4 {
+    font-size: 24px;
+    line-height: 30px;
+}
+h5 {
+    font-size: 18px;
+    line-height: 24px;
+}
+h6 {
+    font-size: 14px;
+    line-height: 18px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.section{
+    padding: 100px 0;
+    border-top: solid 1px #efefef;
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+   }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+   }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+   }
+}
