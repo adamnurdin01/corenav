@@ -1,3 +1,11 @@
+// ============================================== //
+// Author : Adam Muhammad Nurdin
+// Email  : adamnurdin0@gmail.com
+// Project  : corenav
+// version  : 1.0.1
+// Description  : coreNavigation is a multi purpose navigation menu for javascript library based on jquery, come with more style and easy to combination.
+// ============================================== //
+
 ! function(n) {
     var e = {};
 
@@ -29,8 +37,23 @@
         return o.d(e, "a", e), e
     }, o.o = function(n, e) {
         return Object.prototype.hasOwnProperty.call(n, e)
-    }, o.p = "", o(o.s = 25)
+    }, o.p = "", o(o.s = 24)
 }([function(n, e, o) {
+    "use strict";
+    var t = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(n) {
+            return typeof n
+        } : function(n) {
+            return n && "function" == typeof Symbol && n.constructor === Symbol && n !== Symbol.prototype ? "symbol" : typeof n
+        },
+        r = o(16),
+        i = "object" == ("undefined" == typeof self ? "undefined" : t(self)) && self && self.Object === Object && self,
+        s = r || i || Function("return this")();
+    n.exports = s
+}, function(n, e, o) {
+    "use strict";
+    var t = o(0).Symbol;
+    n.exports = t
+}, function(n, e, o) {
     "use strict";
     var t = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(n) {
         return typeof n
@@ -43,79 +66,8 @@
     }
 }, function(n, e, o) {
     "use strict";
-    var t = o(0),
-        r = o(11),
-        i = o(4),
-        s = "Expected a function",
-        a = Math.max,
-        c = Math.min;
-    n.exports = function(n, e, o) {
-        var l, d, u, p, v, f, w = 0,
-            $ = !1,
-            h = !1,
-            y = !0;
-        if ("function" != typeof n) throw new TypeError(s);
-
-        function m(e) {
-            var o = l,
-                t = d;
-            return l = d = void 0, w = e, p = n.apply(t, o)
-        }
-
-        function g(n) {
-            var o = n - f;
-            return void 0 === f || o >= e || o < 0 || h && n - w >= u
-        }
-
-        function b() {
-            var n = r();
-            if (g(n)) return C(n);
-            v = setTimeout(b, function(n) {
-                var o = e - (n - f);
-                return h ? c(o, u - (n - w)) : o
-            }(n))
-        }
-
-        function C(n) {
-            return v = void 0, y && l ? m(n) : (l = d = void 0, p)
-        }
-
-        function S() {
-            var n = r(),
-                o = g(n);
-            if (l = arguments, d = this, f = n, o) {
-                if (void 0 === v) return function(n) {
-                    return w = n, v = setTimeout(b, e), $ ? m(n) : p
-                }(f);
-                if (h) return v = setTimeout(b, e), m(f)
-            }
-            return void 0 === v && (v = setTimeout(b, e)), p
-        }
-        return e = i(e) || 0, t(o) && ($ = !!o.leading, u = (h = "maxWait" in o) ? a(i(o.maxWait) || 0, e) : u, y = "trailing" in o ? !!o.trailing : y), S.cancel = function() {
-            void 0 !== v && clearTimeout(v), w = 0, l = f = d = v = void 0
-        }, S.flush = function() {
-            return void 0 === v ? p : C(r())
-        }, S
-    }
-}, function(n, e, o) {
-    "use strict";
-    var t = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(n) {
-            return typeof n
-        } : function(n) {
-            return n && "function" == typeof Symbol && n.constructor === Symbol && n !== Symbol.prototype ? "symbol" : typeof n
-        },
-        r = o(17),
-        i = "object" == ("undefined" == typeof self ? "undefined" : t(self)) && self && self.Object === Object && self,
-        s = r || i || Function("return this")();
-    n.exports = s
-}, function(n, e, o) {
-    "use strict";
-    var t = o(2).Symbol;
-    n.exports = t
-}, function(n, e, o) {
-    "use strict";
-    var t = o(0),
-        r = o(19),
+    var t = o(2),
+        r = o(18),
         i = NaN,
         s = /^\s+|\s+$/g,
         a = /^[-+]0x[0-9a-f]+$/i,
@@ -228,24 +180,65 @@
     n.exports = t
 }, function(n, e, o) {
     "use strict";
-    var t = o(2);
+    var t = o(0);
     n.exports = function() {
         return t.Date.now()
     }
 }, function(n, e, o) {
     "use strict";
-    var t = o(1),
-        r = o(0),
-        i = "Expected a function";
+    var t = o(2),
+        r = o(10),
+        i = o(3),
+        s = "Expected a function",
+        a = Math.max,
+        c = Math.min;
     n.exports = function(n, e, o) {
-        var s = !0,
-            a = !0;
-        if ("function" != typeof n) throw new TypeError(i);
-        return r(o) && (s = "leading" in o ? !!o.leading : s, a = "trailing" in o ? !!o.trailing : a), t(n, e, {
-            leading: s,
-            maxWait: e,
-            trailing: a
-        })
+        var l, d, u, p, v, f, w = 0,
+            $ = !1,
+            h = !1,
+            y = !0;
+        if ("function" != typeof n) throw new TypeError(s);
+
+        function m(e) {
+            var o = l,
+                t = d;
+            return l = d = void 0, w = e, p = n.apply(t, o)
+        }
+
+        function g(n) {
+            var o = n - f;
+            return void 0 === f || o >= e || o < 0 || h && n - w >= u
+        }
+
+        function b() {
+            var n = r();
+            if (g(n)) return C(n);
+            v = setTimeout(b, function(n) {
+                var o = e - (n - f);
+                return h ? c(o, u - (n - w)) : o
+            }(n))
+        }
+
+        function C(n) {
+            return v = void 0, y && l ? m(n) : (l = d = void 0, p)
+        }
+
+        function S() {
+            var n = r(),
+                o = g(n);
+            if (l = arguments, d = this, f = n, o) {
+                if (void 0 === v) return function(n) {
+                    return w = n, v = setTimeout(b, e), $ ? m(n) : p
+                }(f);
+                if (h) return v = setTimeout(b, e), m(f)
+            }
+            return void 0 === v && (v = setTimeout(b, e)), p
+        }
+        return e = i(e) || 0, t(o) && ($ = !!o.leading, u = (h = "maxWait" in o) ? a(i(o.maxWait) || 0, e) : u, y = "trailing" in o ? !!o.trailing : y), S.cancel = function() {
+            void 0 !== v && clearTimeout(v), w = 0, l = f = d = v = void 0
+        }, S.flush = function() {
+            return void 0 === v ? p : C(r())
+        }, S
     }
 }, function(n, e, o) {
     "use strict";
@@ -265,7 +258,7 @@
     }
 }, function(n, e, o) {
     "use strict";
-    var t = o(3),
+    var t = o(1),
         r = Object.prototype,
         i = r.hasOwnProperty,
         s = r.toString,
@@ -306,12 +299,12 @@
             },
             t = "object" == (void 0 === e ? "undefined" : o(e)) && e && e.Object === Object && e;
         n.exports = t
-    }).call(this, o(16))
+    }).call(this, o(15))
 }, function(n, e, o) {
     "use strict";
-    var t = o(3),
-        r = o(15),
-        i = o(14),
+    var t = o(1),
+        r = o(14),
+        i = o(13),
         s = "[object Null]",
         a = "[object Undefined]",
         c = t ? t.toStringTag : void 0;
@@ -325,15 +318,15 @@
         } : function(n) {
             return n && "function" == typeof Symbol && n.constructor === Symbol && n !== Symbol.prototype ? "symbol" : typeof n
         },
-        r = o(18),
-        i = o(13),
+        r = o(17),
+        i = o(12),
         s = "[object Symbol]";
     n.exports = function(n) {
         return "symbol" == (void 0 === n ? "undefined" : t(n)) || i(n) && r(n) == s
     }
 }, function(n, e, o) {
     "use strict";
-    var t = o(4),
+    var t = o(3),
         r = 1 / 0,
         i = 1.7976931348623157e308;
     n.exports = function(n) {
@@ -341,7 +334,7 @@
     }
 }, function(n, e, o) {
     "use strict";
-    var t = o(20);
+    var t = o(19);
     n.exports = function(n) {
         var e = t(n),
             o = e % 1;
@@ -349,7 +342,7 @@
     }
 }, function(n, e, o) {
     "use strict";
-    var t = o(21),
+    var t = o(20),
         r = "Expected a function";
     n.exports = function(n, e) {
         var o;
@@ -361,14 +354,14 @@
     }
 }, function(n, e, o) {
     "use strict";
-    var t = o(22);
+    var t = o(21);
     n.exports = function(n) {
         return t(2, n)
     }
 }, function(n, e, o) {
     "use strict";
-    var t = i(o(23)),
-        r = (i(o(12)), i(o(1)));
+    var t = i(o(22)),
+        r = i(o(11));
 
     function i(n) {
         return n && n.__esModule ? n : {
@@ -538,13 +531,13 @@
     n.exports = s
 }, function(n, e, o) {
     "use strict";
-    var t, r = u(o(24)),
-        i = u(o(10)),
-        s = u(o(9)),
-        a = u(o(8)),
-        c = u(o(7)),
-        l = u(o(6)),
-        d = u(o(5));
+    var t, r = u(o(23)),
+        i = u(o(9)),
+        s = u(o(8)),
+        a = u(o(7)),
+        c = u(o(6)),
+        l = u(o(5)),
+        d = u(o(4));
 
     function u(n) {
         return n && n.__esModule ? n : {

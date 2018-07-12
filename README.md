@@ -1,6 +1,6 @@
 # Corenav
 
-coreNavigation (v.1.0.0) is a multi purpose navigation menu for javascript library based on jquery, come with more style and easy to combination.
+coreNavigation (v.1.0.1) is a multi purpose navigation menu for javascript library based on jquery, come with more style and easy to combination.
 
   - 9 Default Menu
   - 2 Responsive Navigation
@@ -71,5 +71,8 @@ $('nav').coreNavigation({
 | onEndSticky || Callback event end sticky mode |
 
 ### Logs
-    - 25 Juni 2018
+    - 12 July 2018 V.1.0.1
+        - Attributes feature on sidebar menu
+
+    - 25 Juni 2018 V.1.0.0
         - Initilize release
