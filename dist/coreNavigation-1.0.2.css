@@ -2,10 +2,9 @@
 /* Author : Adam Muhammad Nurdin
 /* Email  : adamnurdin0@gmail.com
 /* Project  : corenav
-/* version  : 1.0.1
+/* version  : 1.0.2
 /* Description  : coreNavigation is a multi purpose navigation menu for javascript library based on jquery, come with more style and easy to combination.
 /* ============================================== */
-
 
 * {
 	box-sizing: border-box
@@ -1045,6 +1044,20 @@
 	}
 	.core-nav ul.attributes .dropdown.open .dropdown-menu {
 		display: block
+	}
+	.core-nav .wrap-core-nav-list.dropdown-accordion .core-nav-list>li.dropdown>a {
+		display: block;
+		position: relative
+	}
+	.core-nav .wrap-core-nav-list.dropdown-accordion .core-nav-list>li.dropdown .dropdown-menu {
+		position: relative!important;
+		width: 100%!important
+	}
+	.core-nav .wrap-core-nav-list.dropdown-accordion .core-nav-list>li.dropdown.open>.dropdown-menu {
+		display: block;
+		position: relative;
+		border: 0!important;
+		padding-left: 15px
 	}
 }
 

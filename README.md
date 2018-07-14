@@ -4,7 +4,7 @@ coreNavigation (v.1.0.1) is a multi purpose navigation menu for javascript libra
 
   - 9 Default Menu
   - 2 Responsive Navigation
-  - 6 Event Menu
+  - 7 Event Menu
   - 6 Attributes Header
   - 3 Mode Menu Position
   - 9 Layout Navigation
@@ -62,6 +62,9 @@ $('nav').coreNavigation({
 | responsideSlide | false | 	true or false |
 | dropdownEvent	 | hover | 	String value for dropdown event : click, hover, accordion |
 | mode | default | String value for dropdown event : default, fixed, sticky |
+| animated | false | 	true or false |
+| animatedIn | bounceIn | Visit for more animates: https://daneden.github.io/animate.css/ |
+| animatedOut | bounceOut | Visit for more animates: https://daneden.github.io/animate.css/ |
 | onInit || Initial function on init |
 | onOpenDropdown || Callback event open dropdown |
 | onCloseDropdown || Callback event close dropdown |
@@ -71,6 +74,9 @@ $('nav').coreNavigation({
 | onEndSticky || Callback event end sticky mode |
 
 ### Logs
+    - 14 July 2018 V.1.0.2
+        - Animation style for dropdown & megamenu
+
     - 12 July 2018 V.1.0.1
         - Attributes feature on sidebar menu
 
