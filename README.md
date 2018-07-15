@@ -1,6 +1,6 @@
 # Corenav
 
-coreNavigation (v.1.0.1) is a multi purpose navigation menu for javascript library based on jquery, come with more style and easy to combination.
+**coreNavigation** is a multi purpose navigation menu for javascript library based on jquery, come with more style and easy to combination.
 
   - 9 Default Menu
   - 2 Responsive Navigation
@@ -17,6 +17,17 @@ Demo : http://corenav.com
 
 
 ### Instalations
+**Install from NPM**
+Make sure to install [jQuery NPM](https://www.npmjs.com/package/jquery "jQuery NPM") & [css-loader](https://github.com/webpack-contrib/css-loader "css-loader") for import 'corenav/coreNavigation.css'
+```sh
+npm i corenav --save
+```
+```sh
+import 'corenav/coreNavigation.css';
+import 'corenav';
+```
+
+**Install from static**
 Include coreNavigation assets CSS & Javascript
 ```sh
 <link rel="stylesheet" href="./css/coreNavigation.css" />
@@ -74,11 +85,11 @@ $('nav').coreNavigation({
 | onEndSticky || Callback event end sticky mode |
 
 ### Logs
-    - 14 July 2018 V.1.0.2
-        - Animation style for dropdown & megamenu
+- **14 July 2018 V.1.0.2**
+Animation style for dropdown & megamenu
 
-    - 12 July 2018 V.1.0.1
-        - Attributes feature on sidebar menu
+- **12 July 2018 V.1.0.1**
+Attributes feature on sidebar menu
 
-    - 25 Juni 2018 V.1.0.0
-        - Initilize release
+- **25 Juni 2018 V.1.0.0**
+Initilize release

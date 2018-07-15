@@ -1,7 +1,7 @@
 {
   "name": "corenav",
-  "version": "1.0.1",
-  "description": "Is a multi purpose navigation menu for javascript library based on jquery, come with more style and easy to combination.",
+  "version": "1.0.2",
+  "description": "coreNavigatio is a multi purpose navigation menu for javascript library based on jquery, come with more style and easy to combination.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
