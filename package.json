@@ -1,6 +1,6 @@
 {
   "name": "corenav",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "coreNavigatio is a multi purpose navigation menu for javascript library based on jquery, come with more style and easy to combination.",
   "main": "index.js",
   "scripts": {

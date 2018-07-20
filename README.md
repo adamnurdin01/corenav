@@ -85,6 +85,10 @@ $('nav').coreNavigation({
 | onEndSticky || Callback event end sticky mode |
 
 ### Logs
+- **20 July 2018 V.1.0.2**
+Fix bug for hidden on prepare elements
+Dropdown on sidebar
+
 - **14 July 2018 V.1.0.2**
 Animation style for dropdown & megamenu
 

@@ -2,7 +2,7 @@
 // Author : Adam Muhammad Nurdin
 // Email  : adamnurdin0@gmail.com
 // Project  : corenav
-// version  : 1.0.2
+// version  : 1.0.5
 // Description  : coreNavigation is a multi purpose navigation menu for javascript library based on jquery, come with more style and easy to combination.
 // ============================================== //
 
@@ -371,7 +371,7 @@
     var r = {
         init: function(n, e) {
             var o = this;
-            if (n.addClass("core-nav"), $(".core-content").length || $("body").wrapInner('<div class="core-content"></div>'), $(e.menu).addClass("core-nav-list"), $(e.toggleMenu).addClass("core-nav-toggle"), $(e.menu).wrap('<div class="wrap-core-nav-list"></div>'), $(".wrap-core-nav-list, .nav-header").addClass(e.menuPosition), "default" == e.layout) switch (e.menuPosition) {
+            if (n.addClass("core-nav"), $(".core-nav").removeAttr("hidden"), $(".core-content").length || $("body").wrapInner('<div class="core-content"></div>'), $(e.menu).addClass("core-nav-list"), $(e.toggleMenu).addClass("core-nav-toggle"), $(e.menu).wrap('<div class="wrap-core-nav-list"></div>'), $(".wrap-core-nav-list, .nav-header").addClass(e.menuPosition), "default" == e.layout) switch (e.menuPosition) {
                 case "bottom":
                     e.container ? ($(".wrap-core-nav-list").wrapInner("<div class='nav-container'></div>"), $(e.header).wrapInner("<div class='nav-container'></div>")) : ($(".wrap-core-nav-list").wrapInner("<div class='full-container'></div>"), $(e.header).wrapInner("<div class='full-container'></div>"));
                     break;
