@@ -2,7 +2,7 @@
 
 **coreNavigation** is a multi purpose navigation menu for javascript library based on jquery, come with more style and easy to combination.
 
-  - 9 Default Menu
+  - 11 Default Menu
   - 2 Responsive Navigation
   - 7 Event Menu
   - 6 Attributes Header
@@ -77,6 +77,7 @@ $('nav').coreNavigation({
 | animatedIn | bounceIn | Visit for more animates: https://daneden.github.io/animate.css/ |
 | animatedOut | bounceOut | Visit for more animates: https://daneden.github.io/animate.css/ |
 | onInit || Initial function on init |
+| onResize || On Resize windows Callback function |
 | onOpenDropdown || Callback event open dropdown |
 | onCloseDropdown || Callback event close dropdown |
 | onOpenMegaMenu || Callback event open megamenu |
@@ -85,9 +86,10 @@ $('nav').coreNavigation({
 | onEndSticky || Callback event end sticky mode |
 
 ### Logs
-- **20 July 2018 V.1.0.2**
-Fix bug for hidden on prepare elements
-Dropdown on sidebar
+- **04 August 2018 V.1.1.0**
+On Resize Callback
+Default bottom left icon attributes
+Default bottom left icon attributes & content
 
 - **14 July 2018 V.1.0.2**
 Animation style for dropdown & megamenu
