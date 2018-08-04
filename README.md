@@ -35,21 +35,21 @@ Include coreNavigation assets CSS & Javascript
 ```
 Create coreNavigation code & options
 ```sh
-<nav>
-<div class="nav-header">
-    <a href="#" class="brand">
-        <img src="./assets/img/brand.png" />
-    </a>
-    <button class="toggle-bar">
-        <span class="fa fa-bars"></span>
-    </button>	
-</div>								
-<ul class="menu">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Service</a></li>
-    <li><a href="#">Contact Us</a></li>
-</ul>
+<nav hidden>
+    <div class="nav-header">
+        <a href="#" class="brand">
+            <img src="./assets/img/brand.png" />
+        </a>
+        <button class="toggle-bar">
+            <span class="fa fa-bars"></span>
+        </button>	
+    </div>								
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
 </nav>
 ```
 ```sh
