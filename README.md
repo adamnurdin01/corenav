@@ -86,16 +86,20 @@ $('nav').coreNavigation({
 | onEndSticky || Callback event end sticky mode |
 
 ### Logs
+
+- **05 August 2018 V.1.1.1**
+1. Fix bug attributes on sidebar mode
+
 - **04 August 2018 V.1.1.0**
-On Resize Callback
-Default bottom left icon attributes
-Default bottom left icon attributes & content
+1. On Resize Callback
+2. Default bottom left icon attributes
+3. Default bottom left icon attributes & content
 
 - **14 July 2018 V.1.0.2**
-Animation style for dropdown & megamenu
+1. Animation style for dropdown & megamenu
 
 - **12 July 2018 V.1.0.1**
-Attributes feature on sidebar menu
+1. Attributes feature on sidebar menu
 
 - **25 Juni 2018 V.1.0.0**
-Initilize release
+1. Initilize release

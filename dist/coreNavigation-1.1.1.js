@@ -2,7 +2,7 @@
 // Author : Adam Muhammad Nurdin
 // Email  : adamnurdin0@gmail.com
 // Project  : corenav
-// version  : 1.1.0
+// version  : 1.1.1
 // Description  : coreNavigation is a multi purpose navigation menu for javascript library based on jquery, come with more style and easy to combination.
 // ============================================== //
 
@@ -103,7 +103,7 @@
     var t = {
         init: function(n, e) {
             var o = this;
-            $(".core-content").addClass("core-nav-section"), console.log(n, e), this.setPosition(), $(window).on("resize", function() {
+            $(".core-content").addClass("core-nav-section"), this.setPosition(), $(window).on("resize", function() {
                 o.setPosition()
             })
         },
@@ -131,7 +131,7 @@
                 if (o.css("margin-top", "-" + t + "px"), n.menuFullWidth) {
                     var a = $(".core-nav-list > li").length,
                         r = (e - $(".sidebar-toggle").width()) / a;
-                    console.log(r), $(".core-nav-list > li").css("width", r - .5 + "px")
+                    $(".core-nav-list > li").css("width", r - .5 + "px")
                 }
             } else o.css("margin-top", ""), $(".core-nav-list > li").css("width", "")
         }
@@ -533,7 +533,7 @@
                 o = $(".core-nav .attributes"),
                 t = o.length,
                 a = o.html();
-            t && (n.container ? e > 992 && ($(".wrap-core-nav-list .nav-container").prepend('<ul class="attributes">' + a + "</ul>"), $(".nav-header .attributes").remove()) : e > 992 && ($(".wrap-core-nav-list .full-container").prepend('<ul class="attributes">' + a + "</ul>"), $(".nav-header .attributes").remove()), e < 992 && ($(".nav-header").prepend('<ul class="attributes">' + a + "</ul>"), $(".wrap-core-nav-list .attributes").remove(), $(".core-nav .attributes").find(".dropdown").each(function() {
+            t && (n.container ? e > 992 && ($(".wrap-core-nav-list .nav-container").prepend('<ul class="attributes">' + a + "</ul>"), $(".nav-header .attributes").remove()) : e > 992 && ($(".wrap-core-nav-list .full-container").prepend('<ul class="attributes">' + a + "</ul>"), $(".nav-header .attributes").remove()), "sidebar" == n.layout && e > 992 && $(".core-nav").prepend('<ul class="attributes">' + a + "</ul>"), e < 992 && ($(".nav-header").prepend('<ul class="attributes">' + a + "</ul>"), $(".wrap-core-nav-list .attributes").remove(), $(".core-nav .attributes").find(".dropdown").each(function() {
                 var n = $(this).width(),
                     e = -1 * $(".dropdown-menu", this).width();
                 $(".dropdown-menu", this).css("marginLeft", e + n)
@@ -565,7 +565,7 @@
             })
         },
         animateCss: function(n, e, o, t, a) {
-            n.removeClass("animated"), t ? n.removeClass(e.animatedOut) : n.removeClass(e.animatedIn), console.log(e, t), n.addClass("animated " + o), "function" == typeof a && a()
+            n.removeClass("animated"), t ? n.removeClass(e.animatedOut) : n.removeClass(e.animatedIn), n.addClass("animated " + o), "function" == typeof a && a()
         }
     };
     n.exports = i
