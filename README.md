@@ -87,6 +87,9 @@ $('nav').coreNavigation({
 
 ### Logs
 
+- **08 August 2018 V.1.1.2**
+1. Fix bug attributes fullwidth & container
+
 - **05 August 2018 V.1.1.1**
 1. Fix bug attributes on sidebar mode
 

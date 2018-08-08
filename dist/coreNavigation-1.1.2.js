@@ -2,7 +2,7 @@
 // Author : Adam Muhammad Nurdin
 // Email  : adamnurdin0@gmail.com
 // Project  : corenav
-// version  : 1.1.1
+// version  : 1.1.2
 // Description  : coreNavigation is a multi purpose navigation menu for javascript library based on jquery, come with more style and easy to combination.
 // ============================================== //
 
@@ -533,19 +533,30 @@
                 o = $(".core-nav .attributes"),
                 t = o.length,
                 a = o.html();
-            t && (n.container ? e > 992 && ($(".wrap-core-nav-list .nav-container").prepend('<ul class="attributes">' + a + "</ul>"), $(".nav-header .attributes").remove()) : e > 992 && ($(".wrap-core-nav-list .full-container").prepend('<ul class="attributes">' + a + "</ul>"), $(".nav-header .attributes").remove()), "sidebar" == n.layout && e > 992 && $(".core-nav").prepend('<ul class="attributes">' + a + "</ul>"), e < 992 && ($(".nav-header").prepend('<ul class="attributes">' + a + "</ul>"), $(".wrap-core-nav-list .attributes").remove(), $(".core-nav .attributes").find(".dropdown").each(function() {
-                var n = $(this).width(),
-                    e = -1 * $(".dropdown-menu", this).width();
-                $(".dropdown-menu", this).css("marginLeft", e + n)
-            }), $(".core-nav .attributes").find(".megamenu").each(function() {
-                var n = $(this).width(),
-                    e = -1 * $(".megamenu-content", this).width();
-                $(".megamenu-content", this).css("marginLeft", e + n)
-            })), o.remove(), this.megaMenu(n, ".attributes .megamenu"), this.dropddownMenu(n, ".attributes .dropdown"), $(".toggle-side-menu").on("click", function(n) {
-                n.preventDefault(), $(".core-content").toggleClass("open-side-menu")
-            }), $(window).on("resize", function() {
-                $(".core-content").removeClass("open-side-menu")
-            }), this.topSearch(n), this.fullScreenSearch())
+            if (t) {
+                switch (n.menuPosition) {
+                    case "bottom center":
+                    case "bottom right":
+                    case "bottom":
+                        n.container ? e > 992 && ($(".core-nav .nav-container").prepend('<ul class="attributes">' + a + "</ul>"), $(".nav-header .attributes").remove()) : e > 992 && ($(".core-nav .full-container").prepend('<ul class="attributes">' + a + "</ul>"), $(".nav-header .attributes").remove());
+                        break;
+                    default:
+                        n.container, e > 992 && ($(".core-nav .wrap-core-nav-list").prepend('<ul class="attributes">' + a + "</ul>"), $(".nav-header .attributes").remove())
+                }
+                "sidebar" == n.layout && e > 992 && $(".core-nav").prepend('<ul class="attributes">' + a + "</ul>"), e < 992 && ($(".nav-header").prepend('<ul class="attributes">' + a + "</ul>"), $(".wrap-core-nav-list .attributes").remove(), $(".core-nav .attributes").find(".dropdown").each(function() {
+                    var n = $(this).width(),
+                        e = -1 * $(".dropdown-menu", this).width();
+                    $(".dropdown-menu", this).css("marginLeft", e + n)
+                }), $(".core-nav .attributes").find(".megamenu").each(function() {
+                    var n = $(this).width(),
+                        e = -1 * $(".megamenu-content", this).width();
+                    $(".megamenu-content", this).css("marginLeft", e + n)
+                })), o.remove(), this.megaMenu(n, ".attributes .megamenu"), this.dropddownMenu(n, ".attributes .dropdown"), $(".toggle-side-menu").on("click", function(n) {
+                    n.preventDefault(), $(".core-content").toggleClass("open-side-menu")
+                }), $(window).on("resize", function() {
+                    $(".core-content").removeClass("open-side-menu")
+                }), this.topSearch(n), this.fullScreenSearch()
+            }
         },
         scrollSpy: function(n) {
             $(".scrollspy").each(function() {
