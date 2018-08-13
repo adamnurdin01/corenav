@@ -2,7 +2,7 @@
 // Author : Adam Muhammad Nurdin
 // Email  : adamnurdin0@gmail.com
 // Project  : corenav
-// version  : 1.1.2
+// version  : 1.1.3
 // Description  : coreNavigation is a multi purpose navigation menu for javascript library based on jquery, come with more style and easy to combination.
 // ============================================== //
 
@@ -389,7 +389,7 @@
             }), $(window).on("resize", function() {
                 $(".core-nav .dropdown").removeClass("open")
             }), this.setMode(e), this.scrollSpy(e), o.contentHeader(e), $.isFunction(e.onInit) && e.onInit(), $(window).on("resize", (0, a.default)(function() {
-                o.contentHeader(e), o.attributesIcon(e), $.isFunction(e.onInit) && e.onResize()
+                o.contentHeader(e), o.attributesIcon(e), $.isFunction(e.onResize) && e.onResize()
             }, 1e3))
         },
         setMode: function(n) {

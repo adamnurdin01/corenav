@@ -87,6 +87,9 @@ $('nav').coreNavigation({
 
 ### Logs
 
+- **13 August 2018 V.1.1.2**
+1. Fix bug event onresize
+
 - **08 August 2018 V.1.1.2**
 1. Fix bug attributes fullwidth & container
 
