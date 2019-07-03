@@ -384,10 +384,10 @@
                 default:
                     e.container ? n.wrapInner("<div class='nav-container'></div>") : n.wrapInner("<div class='full-container'></div>")
             }
-            e.responsideSlide && $(".core-content").addClass("core-responsive-slide"), o.attributesIcon(e), o.toggleMenu(n), o.megaMenu(e, ".core-nav-list .megamenu"), o.dropddownMenu(e, ".core-nav-list .dropdown"), $(".dropdown-overlay").on("click", function(n) {
-                n.preventDefault(), $(".core-nav .dropdown").removeClass("open"), $(".core-nav .megamenu").removeClass("open"), $(".dropdown-overlay").removeClass("open-dropdown"), $(".core-nav").removeClass("open-dropdown"), $(".core-nav").removeClass("open-responsive"), $(".core-responsive-slide").removeClass("open"), $.isFunction(e.onCloseDropdown) && e.onCloseDropdown(), $.isFunction(e.onCloseMegaMenu) && e.onCloseMegaMenu()
+            e.responsideSlide && $(".core-content").addClass("core-responsive-slide"), o.attributesIcon(e), o.toggleMenu(n), o.megaMenu(e, ".core-nav-list .megamenu"), o.dropddownMenu(e, ".core-nav-list .core-nav-dropdown"), $(".core-nav-dropdown-overlay").on("click", function(n) {
+                n.preventDefault(), $(".core-nav .core-nav-dropdown").removeClass("open"), $(".core-nav .megamenu").removeClass("open"), $(".core-nav-dropdown-overlay").removeClass("open-dropdown"), $(".core-nav").removeClass("open-dropdown"), $(".core-nav").removeClass("open-responsive"), $(".core-responsive-slide").removeClass("open"), $.isFunction(e.onCloseDropdown) && e.onCloseDropdown(), $.isFunction(e.onCloseMegaMenu) && e.onCloseMegaMenu()
             }), $(window).on("resize", function() {
-                $(".core-nav .dropdown").removeClass("open")
+                $(".core-nav .core-nav-dropdown").removeClass("open")
             }), this.setMode(e), this.scrollSpy(e), o.contentHeader(e), $.isFunction(e.onInit) && e.onInit(), $(window).on("resize", (0, a.default)(function() {
                 o.contentHeader(e), o.attributesIcon(e), $.isFunction(e.onResize) && e.onResize()
             }, 1e3))
@@ -443,11 +443,11 @@
         },
         toggleMenu: function(n) {
             $(".core-nav-toggle").on("click", function(e) {
-                e.preventDefault(), n.toggleClass("open-responsive"), $(".core-responsive-slide").length && $(".core-responsive-slide").toggleClass("open"), $(".open-responsive").length ? ($(".dropdown-overlay").addClass("open-dropdown"), $(".core-nav").addClass("open-dropdown"), $(".core-nav .attributes .megamenu").removeClass("open"), $(".core-nav .attributes .dropdown").removeClass("open")) : ($(".dropdown-overlay").removeClass("open-dropdown"), $(".core-nav").removeClass("open-dropdown")), $(".wrap-search-top").slideUp()
+                e.preventDefault(), n.toggleClass("open-responsive"), $(".core-responsive-slide").length && $(".core-responsive-slide").toggleClass("open"), $(".open-responsive").length ? ($(".core-nav-dropdown-overlay").addClass("open-dropdown"), $(".core-nav").addClass("open-dropdown"), $(".core-nav .attributes .megamenu").removeClass("open"), $(".core-nav .attributes .core-nav-dropdown").removeClass("open")) : ($(".core-nav-dropdown-overlay").removeClass("open-dropdown"), $(".core-nav").removeClass("open-dropdown")), $(".wrap-search-top").slideUp()
             })
         },
         megaMenu: function(n, e) {
-            $(".dropdown-overlay").length || $(".core-nav").after('<div class="dropdown-overlay"></div>'), $(e).each(function() {
+            $(".core-nav-dropdown-overlay").length || $(".core-nav").after('<div class="core-nav-dropdown-overlay"></div>'), $(e).each(function() {
                 var e = $(this),
                     o = $(this).find("a").eq(0),
                     t = $(this).data("width");
@@ -457,7 +457,7 @@
                             e.removeClass("open")
                         }, 500)
                     }) : e.removeClass("open"), $.isFunction(n.onCloseMegaMenu) && n.onCloseMegaMenu()) : ($(".megamenu").removeClass("open"), n.animated ? (e.addClass("open"), i.animateCss(e.find(".megamenu-content").eq(0), n, n.animatedIn, !0)) : e.addClass("open"), $.isFunction(n.onOpenMegaMenu) && n.onOpenMegaMenu())), i.overlayDropdown()
-                }), n.dropdownEvent) {
+                }), n.dropdownEvent) { 
                     case "hover":
                         o.on("mouseenter", function(o) {
                             $(window).width() > 920 && (n.animated ? (e.addClass("open"), i.animateCss(e.find(".megamenu-content").eq(0), n, n.animatedIn, !0)) : e.addClass("open")), i.overlayDropdown(), $.isFunction(n.onOpenMegaMenu) && n.onOpenMegaMenu()
@@ -482,7 +482,7 @@
             })
         },
         dropddownMenu: function(n, e) {
-            $(".dropdown-overlay").length || $(".core-nav").after('<div class="dropdown-overlay"></div>'), $(e).each(function() {
+            $(".core-nav-dropdown-overlay").length || $(".core-nav").after('<div class="core-nav-dropdown-overlay"></div>'), $(e).each(function() {
                 var e = $(this),
                     o = $(this).find("a").eq(0);
                 switch (e.removeClass("open"), o.on("click", function(o) {
@@ -513,7 +513,7 @@
                         });
                         break;
                     case "accordion":
-                        $(".wrap-core-nav-list").addClass("dropdown-accordion"), o.on("click", function(o) {
+                        $(".wrap-core-nav-list").addClass("core-nav-dropdown-accordion"), o.on("click", function(o) {
                             o.preventDefault(), $(window).width() > 920 && (e.hasClass("open") ? (n.animated ? i.animateCss(e.find(".core-nav-dropdown-menu").eq(0), n, n.animatedOut, !1, function() {
                                 setTimeout(function() {
                                     e.removeClass("open")
@@ -524,9 +524,9 @@
             })
         },
         overlayDropdown: function() {
-            var n = $(".dropdown").hasClass("open"),
+            var n = $(".core-nav-dropdown").hasClass("open"),
                 e = $(".megamenu").hasClass("open");
-            n || e ? ($(".dropdown-overlay").addClass("open-dropdown"), $(".core-nav").addClass("open-dropdown")) : ($(".dropdown-overlay").removeClass("open-dropdown"), $(".core-nav").removeClass("open-dropdown"))
+            n || e ? ($(".core-nav-dropdown-overlay").addClass("open-dropdown"), $(".core-nav").addClass("open-dropdown")) : ($(".core-nav-dropdown-overlay").removeClass("open-dropdown"), $(".core-nav").removeClass("open-dropdown"))
         },
         attributesIcon: function(n) {
             var e = $(window).width(),
@@ -543,7 +543,7 @@
                     default:
                         n.container, e > 992 && ($(".core-nav .wrap-core-nav-list").prepend('<ul class="attributes">' + a + "</ul>"), $(".nav-header .attributes").remove())
                 }
-                "sidebar" == n.layout && e > 992 && $(".core-nav").prepend('<ul class="attributes">' + a + "</ul>"), e < 992 && ($(".nav-header").prepend('<ul class="attributes">' + a + "</ul>"), $(".wrap-core-nav-list .attributes").remove(), $(".core-nav .attributes").find(".dropdown").each(function() {
+                "sidebar" == n.layout && e > 992 && $(".core-nav").prepend('<ul class="attributes">' + a + "</ul>"), e < 992 && ($(".nav-header").prepend('<ul class="attributes">' + a + "</ul>"), $(".wrap-core-nav-list .attributes").remove(), $(".core-nav .attributes").find(".core-nav-dropdown").each(function() {
                     var n = $(this).width(),
                         e = -1 * $(".core-nav-dropdown-menu", this).width();
                     $(".core-nav-dropdown-menu", this).css("marginLeft", e + n)
@@ -551,7 +551,7 @@
                     var n = $(this).width(),
                         e = -1 * $(".megamenu-content", this).width();
                     $(".megamenu-content", this).css("marginLeft", e + n)
-                })), o.remove(), this.megaMenu(n, ".attributes .megamenu"), this.dropddownMenu(n, ".attributes .dropdown"), $(".toggle-side-menu").on("click", function(n) {
+                })), o.remove(), this.megaMenu(n, ".attributes .megamenu"), this.dropddownMenu(n, ".attributes .core-nav-dropdown"), $(".toggle-side-menu").on("click", function(n) {
                     n.preventDefault(), $(".core-content").toggleClass("open-side-menu")
                 }), $(window).on("resize", function() {
                     $(".core-content").removeClass("open-side-menu")
