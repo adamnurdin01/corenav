@@ -1,1 +1,1 @@
-[FULL DOCUMENTATION](https://www.npmjs.com/package/jquery "FULL DOCUMENTATION")
+[FULL DOCUMENTATION](http://corenav.anurdin.net/ "FULL DOCUMENTATION")
