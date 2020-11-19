@@ -2,7 +2,7 @@
 /* Author : Adam Muhammad Nurdin
 /* Email  : adamnurdin0@gmail.com
 /* Project  : corenav
-/* version  : 1.1.3
+/* version  : 1.1.4
 /* Description  : coreNavigation is a multi purpose navigation menu for javascript library based on jquery, come with more style and easy to combination.
 /* ============================================== */
 
@@ -778,7 +778,7 @@ Side Icon
 		text-align: center;
 		padding: 10px 5px;
 	}
-	.core-content .nav-side-icon .wrap-core-nav-list ul.core-nav-list>li.dropdown>ul.dropdown-menu {
+	.core-content .nav-side-icon .wrap-core-nav-list ul.core-nav-list>li.dropdown>ul.dropdown-content {
 		top: 0;
 		left: 100%;
 	}
@@ -853,11 +853,11 @@ Dropdown
 	position: relative;
 }
 
-.core-nav .dropdown .dropdown-menu {
+.core-nav .dropdown .dropdown-content {
 	display: none;
 }
 
-.core-nav .dropdown>.dropdown-menu {
+.core-nav .dropdown>.dropdown-content {
 	width: 230px;
 	background: #fff;
 	border: solid 1px #eee;
@@ -866,76 +866,76 @@ Dropdown
 	padding: 0;
 }
 
-.core-nav .dropdown>.dropdown-menu>li {
+.core-nav .dropdown>.dropdown-content>li {
 	float: none;
 	display: block;
 }
 
-.core-nav .dropdown>.dropdown-menu>li>a {
+.core-nav .dropdown>.dropdown-content>li>a {
 	border-bottom: solid 1px #eee;
 	padding: 10px 15px;
 	text-align: left;
 }
 
-.core-nav .dropdown.open>.dropdown-menu {
+.core-nav .dropdown.open>.dropdown-content {
 	display: block;
 }
 
-.core-nav .wrap-core-nav-list.center .dropdown>.dropdown-menu,
-.core-nav .wrap-core-nav-list.left .dropdown>.dropdown-menu {
+.core-nav .wrap-core-nav-list.center .dropdown>.dropdown-content,
+.core-nav .wrap-core-nav-list.left .dropdown>.dropdown-content {
 	left: 0;
 }
 
-.core-nav .wrap-core-nav-list.center .dropdown>.dropdown-menu .dropdown>.dropdown-menu,
-.core-nav .wrap-core-nav-list.left .dropdown>.dropdown-menu .dropdown>.dropdown-menu {
+.core-nav .wrap-core-nav-list.center .dropdown>.dropdown-content .dropdown>.dropdown-content,
+.core-nav .wrap-core-nav-list.left .dropdown>.dropdown-content .dropdown>.dropdown-content {
 	top: 0;
 	left: 100%;
 }
 
-.core-nav .wrap-core-nav-list.right .dropdown>.dropdown-menu {
+.core-nav .wrap-core-nav-list.right .dropdown>.dropdown-content {
 	right: 0;
 }
 
-.core-nav .wrap-core-nav-list.right .dropdown>.dropdown-menu .dropdown>.dropdown-menu {
+.core-nav .wrap-core-nav-list.right .dropdown>.dropdown-content .dropdown>.dropdown-content {
 	top: 0;
 	right: 100%;
 }
 
-.core-nav .wrap-core-nav-list.dropdown-accordion .core-nav-list li.dropdown>.dropdown-menu {
+.core-nav .wrap-core-nav-list.dropdown-accordion .core-nav-list li.dropdown>.dropdown-content {
 	position: relative;
 	width: 100%;
 	border: 0;
 	padding-left: 15px;
 }
 
-.core-nav .wrap-core-nav-list.dropdown-accordion .core-nav-list>li.dropdown>.dropdown-menu {
+.core-nav .wrap-core-nav-list.dropdown-accordion .core-nav-list>li.dropdown>.dropdown-content {
 	position: absolute !important;
 	width: 230px;
 	border: solid 1px #efefef;
 	padding-left: 0;
 }
 
-.core-nav .wrap-core-nav-list.dropdown-accordion.center .dropdown>.dropdown-menu .dropdown>.dropdown-menu,
-.core-nav .wrap-core-nav-list.dropdown-accordion.left .dropdown>.dropdown-menu .dropdown>.dropdown-menu {
+.core-nav .wrap-core-nav-list.dropdown-accordion.center .dropdown>.dropdown-content .dropdown>.dropdown-content,
+.core-nav .wrap-core-nav-list.dropdown-accordion.left .dropdown>.dropdown-content .dropdown>.dropdown-content {
 	left: 0;
 }
 
-.core-nav .wrap-core-nav-list.dropdown-accordion.right .dropdown>.dropdown-menu .dropdown>.dropdown-menu {
+.core-nav .wrap-core-nav-list.dropdown-accordion.right .dropdown>.dropdown-content .dropdown>.dropdown-content {
 	right: 0;
 }
 
-.core-sidebar-toggle .core-nav .wrap-core-nav-list.center>.core-nav-list>li.dropdown>ul.dropdown-menu,
-.core-sidebar-toggle .core-nav .wrap-core-nav-list.left>.core-nav-list>li.dropdown>ul.dropdown-menu,
-.core-sidebar-toggle .core-nav .wrap-core-nav-list.right>.core-nav-list>li.dropdown>ul.dropdown-menu,
-.core-sidebar .core-nav .wrap-core-nav-list.center>.core-nav-list>li.dropdown>ul.dropdown-menu,
-.core-sidebar .core-nav .wrap-core-nav-list.left>.core-nav-list>li.dropdown>ul.dropdown-menu,
-.core-sidebar .core-nav .wrap-core-nav-list.right>.core-nav-list>li.dropdown>ul.dropdown-menu {
+.core-sidebar-toggle .core-nav .wrap-core-nav-list.center>.core-nav-list>li.dropdown>ul.dropdown-content,
+.core-sidebar-toggle .core-nav .wrap-core-nav-list.left>.core-nav-list>li.dropdown>ul.dropdown-content,
+.core-sidebar-toggle .core-nav .wrap-core-nav-list.right>.core-nav-list>li.dropdown>ul.dropdown-content,
+.core-sidebar .core-nav .wrap-core-nav-list.center>.core-nav-list>li.dropdown>ul.dropdown-content,
+.core-sidebar .core-nav .wrap-core-nav-list.left>.core-nav-list>li.dropdown>ul.dropdown-content,
+.core-sidebar .core-nav .wrap-core-nav-list.right>.core-nav-list>li.dropdown>ul.dropdown-content {
 	left: 100%;
 	top: 0;
 }
 
-.core-sidebar-toggle .core-nav .wrap-core-nav-list.dropdown-accordion .core-nav-list>li.dropdown>.dropdown-menu,
-.core-sidebar .core-nav .wrap-core-nav-list.dropdown-accordion .core-nav-list>li.dropdown>.dropdown-menu {
+.core-sidebar-toggle .core-nav .wrap-core-nav-list.dropdown-accordion .core-nav-list>li.dropdown>.dropdown-content,
+.core-sidebar .core-nav .wrap-core-nav-list.dropdown-accordion .core-nav-list>li.dropdown>.dropdown-content {
 	left: 0 !important;
 	position: relative !important;
 	width: 100%;
@@ -944,7 +944,7 @@ Dropdown
 }
 
 @media (max-width: 920px) {
-	.core-nav .dropdown .dropdown-menu {
+	.core-nav .dropdown .dropdown-content {
 		position: relative;
 		width: 100%;
 		border: 0;
@@ -953,7 +953,7 @@ Dropdown
 		left: 0 !important;
 		right: 0 !important;
 	}
-	.core-nav ul.attributes .dropdown .dropdown-menu {
+	.core-nav ul.attributes .dropdown .dropdown-content {
 		border: solid 1px #efefef;
 		padding: 0;
 		position: absolute;
@@ -963,18 +963,18 @@ Dropdown
 		right: 0;
 		width: 230px;
 	}
-	.core-nav ul.attributes .dropdown.open .dropdown-menu {
+	.core-nav ul.attributes .dropdown.open .dropdown-content {
 		display: block;
 	}
 	.core-nav .wrap-core-nav-list.dropdown-accordion .core-nav-list>li.dropdown>a {
 		display: block;
 		position: relative;
 	}
-	.core-nav .wrap-core-nav-list.dropdown-accordion .core-nav-list>li.dropdown .dropdown-menu {
+	.core-nav .wrap-core-nav-list.dropdown-accordion .core-nav-list>li.dropdown .dropdown-content {
 		position: relative !important;
 		width: 100% !important;
 	}
-	.core-nav .wrap-core-nav-list.dropdown-accordion .core-nav-list>li.dropdown.open>.dropdown-menu {
+	.core-nav .wrap-core-nav-list.dropdown-accordion .core-nav-list>li.dropdown.open>.dropdown-content {
 		display: block;
 		position: relative;
 		border: 0 !important;

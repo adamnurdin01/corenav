@@ -2,7 +2,7 @@
 // Author : Adam Muhammad Nurdin
 // Email  : adamnurdin0@gmail.com
 // Project  : corenav
-// version  : 1.1.3
+// version  : 1.1.4
 // Description  : coreNavigation is a multi purpose navigation menu for javascript library based on jquery, come with more style and easy to combination.
 // ============================================== //
 
@@ -486,17 +486,17 @@
                 var e = $(this),
                     o = $(this).find("a").eq(0);
                 switch (e.removeClass("open"), o.on("click", function(o) {
-                    o.preventDefault(), $(window).width() < 920 && (e.hasClass("open") ? (n.animated ? i.animateCss(e.find(".dropdown-menu").eq(0), n, n.animatedOut, !1, function() {
+                    o.preventDefault(), $(window).width() < 920 && (e.hasClass("open") ? (n.animated ? i.animateCss(e.find(".dropdown-content").eq(0), n, n.animatedOut, !1, function() {
                         setTimeout(function() {
                             e.removeClass("open")
                         }, 500)
-                    }) : e.removeClass("open"), $.isFunction(n.onCloseDropdown) && n.onCloseDropdown()) : (n.animated ? (e.addClass("open"), i.animateCss(e.find(".dropdown-menu").eq(0), n, n.animatedIn, !0)) : e.addClass("open"), $.isFunction(n.onOpenDropdown) && n.onOpenDropdown())), i.overlayDropdown()
+                    }) : e.removeClass("open"), $.isFunction(n.onCloseDropdown) && n.onCloseDropdown()) : (n.animated ? (e.addClass("open"), i.animateCss(e.find(".dropdown-content").eq(0), n, n.animatedIn, !0)) : e.addClass("open"), $.isFunction(n.onOpenDropdown) && n.onOpenDropdown())), i.overlayDropdown()
                 }), n.dropdownEvent) {
                     case "hover":
                         o.on("mouseenter", function(o) {
-                            $(window).width() > 920 && (n.animated ? (e.addClass("open"), i.animateCss(e.find(".dropdown-menu").eq(0), n, n.animatedIn, !0)) : e.addClass("open"), $.isFunction(n.onOpenDropdown) && n.onOpenDropdown()), i.overlayDropdown()
+                            $(window).width() > 920 && (n.animated ? (e.addClass("open"), i.animateCss(e.find(".dropdown-content").eq(0), n, n.animatedIn, !0)) : e.addClass("open"), $.isFunction(n.onOpenDropdown) && n.onOpenDropdown()), i.overlayDropdown()
                         }), e.stop().on("mouseleave", function() {
-                            $(window).width() > 920 && (n.animated ? i.animateCss(e.find(".dropdown-menu").eq(0), n, n.animatedOut, !1, function() {
+                            $(window).width() > 920 && (n.animated ? i.animateCss(e.find(".dropdown-content").eq(0), n, n.animatedOut, !1, function() {
                                 setTimeout(function() {
                                     e.removeClass("open")
                                 }, 500)
@@ -505,20 +505,20 @@
                         break;
                     case "click":
                         o.on("click", function(o) {
-                            o.preventDefault(), $(window).width() > 920 && (e.hasClass("open") ? (n.animated ? i.animateCss(e.find(".dropdown-menu").eq(0), n, n.animatedOut, !1, function() {
+                            o.preventDefault(), $(window).width() > 920 && (e.hasClass("open") ? (n.animated ? i.animateCss(e.find(".dropdown-content").eq(0), n, n.animatedOut, !1, function() {
                                 setTimeout(function() {
                                     e.removeClass("open")
                                 }, 500)
-                            }) : e.removeClass("open"), $.isFunction(n.onCloseDropdown) && n.onCloseDropdown()) : (e.closest("li").closest("ul").find(".open").removeClass("open"), n.animated ? (e.addClass("open"), i.animateCss(e.find(".dropdown-menu").eq(0), n, n.animatedIn, !0)) : e.addClass("open"), $.isFunction(n.onOpenDropdown) && n.onOpenDropdown())), i.overlayDropdown()
+                            }) : e.removeClass("open"), $.isFunction(n.onCloseDropdown) && n.onCloseDropdown()) : (e.closest("li").closest("ul").find(".open").removeClass("open"), n.animated ? (e.addClass("open"), i.animateCss(e.find(".dropdown-content").eq(0), n, n.animatedIn, !0)) : e.addClass("open"), $.isFunction(n.onOpenDropdown) && n.onOpenDropdown())), i.overlayDropdown()
                         });
                         break;
                     case "accordion":
                         $(".wrap-core-nav-list").addClass("dropdown-accordion"), o.on("click", function(o) {
-                            o.preventDefault(), $(window).width() > 920 && (e.hasClass("open") ? (n.animated ? i.animateCss(e.find(".dropdown-menu").eq(0), n, n.animatedOut, !1, function() {
+                            o.preventDefault(), $(window).width() > 920 && (e.hasClass("open") ? (n.animated ? i.animateCss(e.find(".dropdown-content").eq(0), n, n.animatedOut, !1, function() {
                                 setTimeout(function() {
                                     e.removeClass("open")
                                 }, 500)
-                            }) : e.removeClass("open"), $.isFunction(n.onCloseDropdown) && n.onCloseDropdown()) : (e.closest("li").closest("ul").find(".open").removeClass("open"), n.animated ? (e.addClass("open"), i.animateCss(e.find(".dropdown-menu").eq(0), n, n.animatedIn, !0)) : e.addClass("open"), $.isFunction(n.onOpenDropdown) && n.onOpenDropdown())), i.overlayDropdown()
+                            }) : e.removeClass("open"), $.isFunction(n.onCloseDropdown) && n.onCloseDropdown()) : (e.closest("li").closest("ul").find(".open").removeClass("open"), n.animated ? (e.addClass("open"), i.animateCss(e.find(".dropdown-content").eq(0), n, n.animatedIn, !0)) : e.addClass("open"), $.isFunction(n.onOpenDropdown) && n.onOpenDropdown())), i.overlayDropdown()
                         })
                 }
             })
@@ -545,8 +545,8 @@
                 }
                 "sidebar" == n.layout && e > 992 && $(".core-nav").prepend('<ul class="attributes">' + a + "</ul>"), e < 992 && ($(".nav-header").prepend('<ul class="attributes">' + a + "</ul>"), $(".wrap-core-nav-list .attributes").remove(), $(".core-nav .attributes").find(".dropdown").each(function() {
                     var n = $(this).width(),
-                        e = -1 * $(".dropdown-menu", this).width();
-                    $(".dropdown-menu", this).css("marginLeft", e + n)
+                        e = -1 * $(".dropdown-content", this).width();
+                    $(".dropdown-content", this).css("marginLeft", e + n)
                 }), $(".core-nav .attributes").find(".megamenu").each(function() {
                     var n = $(this).width(),
                         e = -1 * $(".megamenu-content", this).width();
